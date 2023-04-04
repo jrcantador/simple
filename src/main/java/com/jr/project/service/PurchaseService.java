@@ -12,9 +12,7 @@ import java.util.Optional;
 public class PurchaseService {
 
     @Autowired
-    private PurchaseRepository purchaseRepository;
-    @Autowired
-    private PurchaseProductsService purchaseProductsService;
+    private PurchaseRepository purchaseRepository;    
 
     public Purchase save(Purchase purchase){
        return purchaseRepository.save(purchase);

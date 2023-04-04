@@ -35,7 +35,7 @@ public class PurchaseController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void remove(Long id) {
+    public void remove(@PathVariable("id") Long id) {
         purchaseService.findById(id).map(purchase -> {
             purchaseService.removeById(purchase.getId());
             return Void.TYPE;
